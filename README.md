@@ -11,7 +11,7 @@ com este exemplo, vamos criar 3 micro-front-ends com compartilhamento de código
 a ideia é de no final da dessa aula ter um modelo de e-commerce bem simples onde teremos
 a mesma experiência sendo criada e compartilhada entre os nossos MFE's, compartilhando código em tempo de execução sem perda de desempenho.
 
-## Aplicação Final
+## Aplicação Final 🎬
 
 <img src="./misc/Application.gif" />
 
@@ -24,13 +24,13 @@ está curioso para saber como vamos fazer isso? Então vamos lá codar !!!.
 Clone o repositório.
 
 ```sh
-git clone git@github.com:rocketseat-experts-club/live-micro-frontends-module-federation-2021-03-18.git
+git clone git@github.com:rocketseat-experts-club/live-micro-frontends-module-federation-2021-03-18.git container
 ```
 
 `cd` no diretório.
 
 ```sh
-cd  [TODO]
+cd  container
 ```
 
 Instale as dependências do diretório principal do projeto:
