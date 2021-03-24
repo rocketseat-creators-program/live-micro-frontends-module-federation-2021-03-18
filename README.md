@@ -11,24 +11,20 @@ com esse exemplo vamos criar 3 micro-front-ends compartilhando codigo de forma b
 a ideia e ao final da aula ter um modelo bem simples de e-commerce onde vamos ter
 com a mesma experiencia sendo criada em todos os nossos MFE, sem perca de performance, compartilhando codigo e atualizando em runtime.
 
-e nesses exemplos eu vou estar utilizando tambem lerna para ajudar com o esquema de mono-repo =)
-
-
 ## Aplicação Final
 
-<img src="./Application.gif" />
+<img src="./misc/Application.gif" />
 
 Note aqui que estamos navegando por servers diferentes mas a experiencia final
 é a mesma não importa em qual MFE você esteja. ta curioso como vamos fazer isso ?
 então vamos la !!!.
-
 
 ## Primeiros passos 🏁
 
 Clone o repositório.
 
 ```sh
-git clone [TODO]
+git clone git@github.com:rocketseat-experts-club/live-micro-frontends-module-federation-2021-03-18.git
 ```
 
 `cd` no diretório.
@@ -37,44 +33,82 @@ git clone [TODO]
 cd  [TODO]
 ```
 
-Instale as dependências do projeto:
+Instale as dependências diretorio principal do projeto:
+
+**OBS aqui vamos utilizar o yarn para gerenciar nossos pacotes**
 
 ```sh
-npm install
+yarn install
+```
+
+depois entre no diretorio dos MFE
+
+```sh
+cd  shared-routing
+```
+
+Instale as dependencias dos MFE
+
+```sh
+yarn install
 ```
 
 Inicie o servidor de desenvolvimento:
 
 ```sh
-npm run start
+yarn  start
 ```
 
-Finalmente, vá para [localhost: 3000](http://localhost:3000) no navegador de sua escolha e você está pronto para integagir com a aplicação inicial 🚀.
-note que as portas 3001 e 3002 tambem vão estar rodando as nossas aplicações
+Com isso você vai ter as aplicaçõe rodando em :
 
-💡 **Dica profissional** use o `Container Final` como guia de referência final, este arquivo contém o projeto final para que você possa acompanhar.
+- [localhost:3000](http://localhost:3000/) (Aplicação host) - `shell`
+- [localhost:3001](http://localhost:3001/) (Aplicação standalone remota) - `ProductList`
+- [localhost:3002](http://localhost:3002/) (Aplicação standalone remota) - `ProductDetails`
 
-## Ferramentas 🧰
+Abra uma dessas portas no navegador de sua escolha e você está pronto para integagir com a aplicação inicial 🚀.
+
+💡 **Dica profissional** use o `shared-routing` como guia de referência final, este arquivo contém o projeto final para que você possa acompanhar.
+
+## Estrutura do Projeto 🏗
+
+Como descrito vamos criar uma estrutura de MFE com hosts host bidirecionais
+podemos ver aqui o grafico de como os nossos MFE vão ser divididos
+
+<img src="./misc/mfe.png" />
+
+Na pasta `Container/shared-routing`, temos os nossos MFE's:
+
+- `Shell`: **MFE** Onde vamos criar o nosso application shell
+- `ProductList /`: **MFE** responsavel pela listagem de produtos
+- `ProductDetails /`: **MFE** responsavel pelo detalhamento de produtos
+
+```md
+├── ProductDetails
+│   ├── package.json
+│   ├── public
+│   ├── src
+│   └── webpack.config.js
+├── ProductList
+│   ├── package.json
+│   ├── public
+│   ├── src
+│   └── webpack.config.js
+├── Shell
+│   ├── package.json
+│   ├── public
+│   ├── src
+│   └── webpack.config.js
+├── package.json
+└── yarn.lock
+```
+
+## Ferramentas Utilizadas 🧰
 
 - [x] React como uma linguagem de IU
 - [x] Webpack5 como module bundler
 - [x] Prettier como formatador de código
 - [x] Lerna para gerenciar o monorepo
 - [x] TailwindCss UI como nosso kit de ferramentas de design
-
-## Estrutura do Projeto 🏗
-
-Como descrito vamos criar uma estrutura de MFE bi-direcional
-podemos ver aqui o grafico de como os nossos MFE vão ser divididos
-
-<img src="./mfe.png" />
-
-Na pasta `Container/shared-routing`, temos os nossos MFE's:
-
-- `shell`: **MFE** Onde vamos criar o nosso application shell
-- `list /`: **MFE** responsavel pela listagem de Produtos
-- `order /`: **MFE** responsavel pelo detalhamento de Produtos
-
 
 ## Expert
 
