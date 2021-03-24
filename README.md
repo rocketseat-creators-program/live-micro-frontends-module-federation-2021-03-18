@@ -2,22 +2,22 @@
 
 ## Criando Micro-Front-Ends com Webpack5 Module Federation
 
-Nesta aula, criaremos vamos utilizar o plugin module federation do webpack
-para criar nosso primeiro Micro-Front-Ends, O Module federeation é responsavel por criar essa integração de mutiplos builds separados
-com ele voce vai poder criar seus MFE compartilhando codigo (componentes, logica, serices, etc..) em run time 🤯, e ao mesmo tempo manter
-seu processo de build deployment e desenvolvimento idenpendentes.
+Nesta lição, usaremos o plugin de module Federation do webpack
+para criar nossos primeiros Micro-Front-Ends, O module federation é responsável por criar essa integração entre vários builds separados,
+com ele, você poderá compartilhar seu código (componentes, lógica, serviços, etc ...) em tempo de execução 🤯, e ao mesmo tempo manter
+seu processo de construção e desenvolvimento em paralelo.
 
-com esse exemplo vamos criar 3 micro-front-ends compartilhando codigo de forma bidirecional,
-a ideia e ao final da aula ter um modelo bem simples de e-commerce onde vamos ter
-com a mesma experiencia sendo criada em todos os nossos MFE, sem perca de performance, compartilhando codigo e atualizando em runtime.
+com este exemplo, vamos criar 3 micro-front-ends com compartilhamento de código de forma bidirecional,
+a ideia é de no final da dessa aula ter um modelo de e-commerce bem simples onde teremos
+a mesma experiência sendo criada e compartilhada entre os nossos MFE's, compartilhando código em tempo de execução sem perda de desempenho.
 
 ## Aplicação Final
 
 <img src="./misc/Application.gif" />
 
-Note aqui que estamos navegando por servers diferentes mas a experiencia final
-é a mesma não importa em qual MFE você esteja. ta curioso como vamos fazer isso ?
-então vamos la !!!.
+Observe aqui que estamos navegando em diferentes servidores, mas a experiência final
+é o mesma, não importa em qual MFE você esteja.
+está curioso para saber como vamos fazer isso? Então vamos lá codar !!!.
 
 ## Primeiros passos 🏁
 
@@ -33,21 +33,21 @@ git clone git@github.com:rocketseat-experts-club/live-micro-frontends-module-fed
 cd  [TODO]
 ```
 
-Instale as dependências diretorio principal do projeto:
+Instale as dependências do diretório principal do projeto:
 
-**OBS aqui vamos utilizar o yarn para gerenciar nossos pacotes**
+**NOTA aqui, usaremos yarn para gerenciar nossos pacotes**
 
 ```sh
 yarn install
 ```
 
-depois entre no diretorio dos MFE
+em seguida, entre no diretório dos nossos MFE's
 
 ```sh
 cd  shared-routing
 ```
 
-Instale as dependencias dos MFE
+Instale as dependencias
 
 ```sh
 yarn install
@@ -59,20 +59,20 @@ Inicie o servidor de desenvolvimento:
 yarn  start
 ```
 
-Com isso você vai ter as aplicaçõe rodando em :
+Com isso, você terá os aplicativos em execução em:
 
-- [localhost:3000](http://localhost:3000/) (Aplicação host) - `shell`
-- [localhost:3001](http://localhost:3001/) (Aplicação standalone remota) - `ProductList`
-- [localhost:3002](http://localhost:3002/) (Aplicação standalone remota) - `ProductDetails`
+- [localhost: 3000] (http: // localhost: 3000 /) (aplicativo host) - `shell`
+- [localhost: 3001] (http: // localhost: 3001 /) (aplicativo autônomo remoto) - `ProductList`
+- [localhost: 3002] (http: // localhost: 3002 /) (aplicativo autônomo remoto) - `ProductDetails`
 
-Abra uma dessas portas no navegador de sua escolha e você está pronto para integagir com a aplicação inicial 🚀.
+Abra uma dessas portas no navegador de sua escolha e você estará pronto para integrar com o aplicativo inicial 🚀.
 
-💡 **Dica profissional** use o `shared-routing` como guia de referência final, este arquivo contém o projeto final para que você possa acompanhar.
+💡 **Dica profissional** use `shared-routing-final` como o guia de referência final, este arquivo contém o projeto final para você seguir.
 
 ## Estrutura do Projeto 🏗
 
-Como descrito vamos criar uma estrutura de MFE com hosts host bidirecionais
-podemos ver aqui o grafico de como os nossos MFE vão ser divididos
+Conforme descrito, criaremos uma estrutura MFE com hosts host bidirecionais
+podemos ver aqui o gráfico de como nossos MFE's vão ser divididos
 
 <img src="./misc/mfe.png" />
 
