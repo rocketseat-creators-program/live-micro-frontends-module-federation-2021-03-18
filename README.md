@@ -61,9 +61,9 @@ yarn  start
 
 Com isso, você terá os aplicativos em execução em:
 
-- [localhost: 3000] (http: // localhost: 3000 /) (aplicativo host) - `shell`
-- [localhost: 3001] (http: // localhost: 3001 /) (aplicativo autônomo remoto) - `ProductList`
-- [localhost: 3002] (http: // localhost: 3002 /) (aplicativo autônomo remoto) - `ProductDetails`
+- [localhost:3000](http://localhost:3000/) (aplicativo host) - `shell`
+- [localhost:3001](http://localhost:3001/) (aplicativo autônomo remoto) - `ProductList`
+- [localhost:3002](http://localhost:3002/) (aplicativo autônomo remoto) - `ProductDetails`
 
 Abra uma dessas portas no navegador de sua escolha e você estará pronto para integrar com o aplicativo inicial 🚀.
 
