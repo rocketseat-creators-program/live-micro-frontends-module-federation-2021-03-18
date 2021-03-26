@@ -35,7 +35,7 @@ cd  container
 
 Instale as dependências do diretório principal do projeto:
 
-|** ⚠️ usaremos yarn para gerenciar nossos pacotes**
+|**⚠️ usaremos yarn para gerenciar nossos pacotes**
 
 ```sh
 yarn install
